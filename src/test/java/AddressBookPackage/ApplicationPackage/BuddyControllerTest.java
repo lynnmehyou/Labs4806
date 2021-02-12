@@ -25,38 +25,14 @@ class BuddyControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Test
-    void getBuddy() throws Exception {
-        this.mockMvc.perform(put("/addressBook")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("\"id\"")));
-        this.mockMvc.perform(post("/buddy?bookId=1").contentType(MediaType.APPLICATION_JSON).content("{\n" +
-                "\t\"name\":\"Chloe\",\n" +
-                "\t\"phoneNumber\":\"456\"\n" +
-                "}")).andDo(print()).andExpect(status().isOk());
-        this.mockMvc.perform(get("/buddy?bookId=1&buddyId=1")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("\"name\":\"Chloe\"")));
-    }
+   // @Test
+    //void getBuddy() throws Exception {
+        //this.mockMvc.perform(post("/buddy").contentType(MediaType.APPLICATION_JSON).content("{\n" +
+                //"\t\"name\":\"Chloe\",\n" +
+                //"\t\"phoneNumber\":\"456\"\n" +
+               //"}")).andDo(print()).andExpect(status().isOk());
+        //this.mockMvc.perform(get("/buddy").param("id", "1")).andDo(print()).andExpect(status().isOk())
+                //.andExpect(content().string(containsString("\"name\":\"Chloe\"")));
+    //}
 
-    @Test
-    public void addBuddy() throws Exception {
-        this.mockMvc.perform(put("/addressBook")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("\"id\"")));
-        this.mockMvc.perform(post("/buddy?bookId=1").contentType(MediaType.APPLICATION_JSON).content("{\n" +
-                "\t\"name\":\"Chloe\",\n" +
-                "\t\"phoneNumber\":\"456\"\n" +
-                "}")).andDo(print()).andExpect(status().isOk());
-    }
-
-    @Test
-    public void removeBuddy() throws Exception {
-        this.mockMvc.perform(put("/addressBook")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("\"id\"")));
-        this.mockMvc.perform(post("/buddy?bookId=1").contentType(MediaType.APPLICATION_JSON).content("{\n" +
-                "\t\"name\":\"Chloe\",\n" +
-                "\t\"phoneNumber\":\"456\"\n" +
-                "}")).andDo(print()).andExpect(status().isOk());
-        this.mockMvc.perform(delete("/buddy?bookId=1&buddyId=1")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("\"name\":\"Chloe\"")));
-
-    }
 }

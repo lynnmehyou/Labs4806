@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BuddyInfoTest {
-    private BuddyInfo buddyInfo;
+    private BuddyInfo buddyInfo= new BuddyInfo("Lynn", "5143462268");;
     @Test
     void getName() {
         assertEquals(buddyInfo.getName(), "Lynn");

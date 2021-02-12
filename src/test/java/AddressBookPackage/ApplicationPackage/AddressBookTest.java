@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AddressBookTest {
-    private AddressBook addressBook;
+/**class AddressBookTest {
+    private AddressBook addressBook = new AddressBook();
     @Test
     public void addBuddy() throws Exception{
         addressBook.addBuddy(new BuddyInfo("Lynn", "5143462268"));
@@ -16,8 +16,8 @@ class AddressBookTest {
         addressBook.removeBuddy(0);
     }
 
-    @Before("addressBook")
+    @Before("")
     public void setUp() throws Exception {
         this.addressBook = new AddressBook();
     }
-}
+}**/
